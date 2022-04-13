@@ -41,6 +41,12 @@ public protocol Springable: AnyObject {
     /// Animation preset
     var curve: String { get set }
     
+    /// Run the animation with the given parameters
+    func animate()
+    /// Run next animation after complete current animation
+    func animateNext(completion: @escaping() -> Void)
+    func animateTo()
+    func animateToNext(completion: @escaping() -> Void)
 }
 
 public class SpringAnimation {
