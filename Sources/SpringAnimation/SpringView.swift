@@ -51,4 +51,18 @@ open class SpringView: UIView, Springable {
             completion()
         }
     }
+    
+    public func animateTo() {
+        animateFrom = false
+        springAnimation.animationPreset()
+        springAnimation.setView {}
+    }
+    
+    public func animateToNext(completion: @escaping () -> ()) {
+        animateFrom = false
+        springAnimation.animationPreset()
+        springAnimation.setView {
+            completion()
+        }
+    }
 }
