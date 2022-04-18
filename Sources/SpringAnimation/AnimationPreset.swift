@@ -6,6 +6,7 @@
 //
 
 public enum AnimationPreset: String, CaseIterable {
+    case pop
     case slideLeft
     case slideRight
     case slideDown
@@ -25,7 +26,6 @@ public enum AnimationPreset: String, CaseIterable {
     case zoomOut
     case fall
     case shake
-    case pop
     case flipX
     case flipY
     case morph
