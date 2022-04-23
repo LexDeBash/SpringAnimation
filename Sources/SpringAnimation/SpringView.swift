@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  SpringView.swift
 //  
 //
 //  Created by Alexey Efimov on 13.04.2022.
@@ -24,7 +24,7 @@ open class SpringView: UIView, Springable {
     @IBInspectable public var rotate: CGFloat = 0
     @IBInspectable public var curve: String = ""
     public var opacity: CGFloat = 1
-    public var animateFrom: Bool = false
+    public var animateFrom = false
     
     lazy private var springAnimation = SpringAnimation(view: self)
     
@@ -39,30 +39,18 @@ open class SpringView: UIView, Springable {
     }
     
     public func animate() {
-        animateFrom = true
-        springAnimation.animationPreset()
-        springAnimation.setView {}
+        springAnimation.animate()
     }
     
     public func animateNext(completion: @escaping() -> Void) {
-        animateFrom = true
-        springAnimation.animationPreset()
-        springAnimation.setView {
-            completion()
-        }
+        springAnimation.animateNext(completion: completion)
     }
     
     public func animateTo() {
-        animateFrom = false
-        springAnimation.animationPreset()
-        springAnimation.setView {}
+        springAnimation.animateTo()
     }
     
     public func animateToNext(completion: @escaping () -> ()) {
-        animateFrom = false
-        springAnimation.animationPreset()
-        springAnimation.setView {
-            completion()
-        }
+        springAnimation.animateToNext(completion: completion)
     }
 }
