@@ -1,13 +1,13 @@
 //
-//  SpringView.swift
+//  SpringImageView.swift
 //  
 //
-//  Created by Alexey Efimov on 13.04.2022.
+//  Created by Alexey Efimov on 18.04.2022.
 //
 
 import UIKit
 
-open class SpringView: UIView, Springable {
+open class SpringImageView: UIImageView, Springable {
     @IBInspectable public var autostart: Bool = false
     @IBInspectable public var autohide: Bool = false
     @IBInspectable public var animation: String = ""
@@ -54,3 +54,5 @@ open class SpringView: UIView, Springable {
         springAnimation.animateToNext(completion: completion)
     }
 }
+
+
