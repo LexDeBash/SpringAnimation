@@ -3,6 +3,9 @@
 ## Requirements
 Requires Xcode 13 and Swift 5.6
 
+## SpringApp
+To see all possible animations and curves in action download the SpringApp application: https://github.com/LexDeBash/SpringApp.git
+
 ## Installation
 ### Swift Package Manager
 Copy framework url to clipboard:
