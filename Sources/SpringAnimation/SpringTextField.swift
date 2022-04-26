@@ -30,12 +30,12 @@ open class SpringTextField: UITextField, Springable {
     
     open override func awakeFromNib() {
         super.awakeFromNib()
-        springAnimation.customAwakeFromNib()
+        springAnimation.awakeFromNib()
     }
     
     open override func layoutSubviews() {
         super.layoutSubviews()
-        springAnimation.customLayoutSubviews()
+        springAnimation.layoutSubviews()
     }
     
     public func animate() {
