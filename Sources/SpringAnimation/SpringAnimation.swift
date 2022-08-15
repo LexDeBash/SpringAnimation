@@ -15,13 +15,13 @@ public final class SpringAnimation {
         )
     }
     
-    public func customAwakeFromNib() {
+    public func awakeFromNib() {
         if view.autohide {
             view.alpha = 0
         }
     }
     
-    public func customLayoutSubviews() {
+    public func layoutSubviews() {
         if shouldAnimateInLayoutSubviews {
             shouldAnimateInLayoutSubviews = false
             if view.autostart {
